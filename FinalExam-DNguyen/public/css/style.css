@@ -1,0 +1,60 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+.trivia{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1d1d1d;
+    color: #FFF;
+    padding-bottom: 30px;
+}
+
+.trivia h1{
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;
+}
+
+.trivia .question{
+    display: flex;
+}
+
+.trivia .quiz{
+    margin-left: 150px;
+    margin-top: 30px;
+    display: block;
+}
+
+.trivia .quiz ul li{
+    list-style: decimal;
+    font-size: 18px;
+    font-family: 700;
+    padding: 5px 0;
+}
+
+.trivia input[type="text"]{
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    outline: none;
+    color: #111;
+    font-weight: 700;
+    font-size: 18px
+}
+
+.trivia .quiz button{
+    margin-top: 50px;
+    padding: 8px 10px;
+    background-color: darkcyan;
+    border: 1px solid darkcyan;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.trivia .quiz button:hover{
+    cursor: pointer;
+    background-color: #1d1d1d;
+}

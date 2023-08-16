@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
+
+    <title>Trivia app</title>
+</head>
+<body>
+    <div class="trivia">
+        <h1>Welcome to Trivia Lounge.</h1>
+
+        <div class="question">
+
+            <div class="quiz">
+                <form id="trivia-form">
+                    <% for (let i = 0; i < questions.length; i++) { %>
+                        <div>
+                            <h2><%= questions[i].question %></h2>
+                            <ul> 
+                                <% for (let j = 0; j < questions[i].answer_options.length; j++) { %>
+                                <li><%= questions[i].answer_options[j] %></li>
+                                <% } %>
+                            </ul>
+                            <input class="answer-input" type="text" required
+                                placeholder="Enter your answer"
+                                data-question-text="<%= questions[i].question %>"
+                            />
+                        </div>
+                    <% } %>
+
+                    <button id="submit-answers-btn">Submit answers</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../public/js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
